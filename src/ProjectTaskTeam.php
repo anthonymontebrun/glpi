@@ -221,6 +221,15 @@ class ProjectTaskTeam extends CommonDBRelation
             $task->getFromDB($this->fields['projecttasks_id']);
             // Raise update event on task
             NotificationEvent::raiseEvent("update", $task);
+            // Raise assign event on task, with the new team member
+            NotificationEvent::raiseEvent(
+                'assign',
+                $task,
+                [
+                    'team_member_itemtype' => $this->fields['itemtype'],
+                    'team_member_items_id' => (int) $this->fields['items_id'],
+                ]
+            );
         }
     }
 

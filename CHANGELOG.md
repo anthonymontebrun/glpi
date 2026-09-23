@@ -6,6 +6,7 @@ The present file will list all changes made to the project; according to the
 ## [11.0.10] unreleased
 
 ### Added
+- New "Assignment of a project task" notification event, raised when a member is added to a project task team, with a "New project task team member" recipient.
 
 ### Changed
 

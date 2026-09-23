@@ -143,6 +143,9 @@ class Notification extends CommonDBTM implements FilterableInterface
     public const VALIDATION_TARGET                   = 40;
     // Notification to the ticket's validation substitutes (Who can approve if the target is not available)
     public const VALIDATION_TARGET_SUBSTITUTES       = 41;
+    // Notification to the member just added to a project task team
+    // (value 48 to match GLPI 12.0, where 42 to 47 are already used)
+    public const NEW_TEAM_MEMBER                     = 48;
 
     // From CommonDBTM
     public $dohistory = true;
